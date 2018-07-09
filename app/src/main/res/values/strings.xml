@@ -8,4 +8,9 @@
     <string name="editTextPassword">Password</string>
     <string name="editTextReTypePassword">ReType Password</string>
     <string name="editTextPhone">Phone Number</string>
+    <string name="TextFullname">Full Name</string>
+    <string name="TextEmail">Email</string>
+    <string name="buttonEdit">Edit</string>
+    <string name="TextPhone">Phone Number</string>
+    <string name="TextUsername">Username</string>
 </resources>

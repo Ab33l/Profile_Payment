@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonalActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:contentInsetStartWithNavigation="0dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    tools:context=".ViewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,57 +13,51 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <EditText
-            android:id="@+id/editTextFullname"
+        <TextView
+            android:id="@+id/TextFullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Full Name"
-            android:inputType="text" />
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:textSize="22dp"
+            android:hint="Kawhi Leonard"/>
 
-        <EditText
-            android:id="@+id/editTextPassword"
+        <TextView
+            android:id="@+id/TextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Enter Password"
-            android:inputType="textPassword" />
+            android:textSize="22dp"
+            android:hint="Klaw"/>
 
-        <EditText
-            android:id="@+id/editTextReTypePassword"
+        <TextView
+            android:id="@+id/TextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:textSize="22dp"
             android:layout_marginTop="8dp"
-            android:hint="Re-Type Password"
-            android:inputType="textPassword" />
+            android:hint="Klaw@gmail.com"
+            />
 
-        <EditText
-            android:id="@+id/editTextPhone"
+        <TextView
+            android:id="@+id/TextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="22dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Enter Phone Number"
-            android:inputType="text" />
+            android:hint="0701020304"
+            />
 
         <Button
-            android:id="@+id/buttonSave"
+            android:id="@+id/buttonEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="S A V E"
+            android:text="E D I T"
             android:textStyle="bold"
             android:background="@android:color/holo_purple"
             android:textColor="@android:color/white"/>
