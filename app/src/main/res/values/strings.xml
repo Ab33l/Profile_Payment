@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Profile_Payment</string>
+    <string name="toolbar">Toolbar</string>
+    <string name="personal">Personal Info</string>
+    <string name="donations">Donations</string>
+    <string name="editTextFullname">Full Name</string>
+    <string name="editTextEmail">Email Address</string>
+    <string name="editTextPassword">Password</string>
+    <string name="editTextReTypePassword">ReType Password</string>
+    <string name="editTextPhone">Phone Number</string>
+</resources>
