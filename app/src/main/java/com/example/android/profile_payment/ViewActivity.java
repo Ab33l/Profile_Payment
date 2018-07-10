@@ -41,6 +41,21 @@ public class ViewActivity extends AppCompatActivity {
                 SharedPrefManager.getInstance(getApplicationContext()).logout();
             }
         });
-    }
-    
+     DonorClient donorClient = APIServiceProvider.createService(DonorClient.class);
+    Call<Donor> donorClient = donorClient.donor(int id);
+     APIHelper.enqueWithRetry(donationItemsCall, new Callback<List<Donation>>() {
+      @Override
+      public void onResponse(@NonNull Call<Donor> call, @NonNull Response<Donor> response) {
+        donorClient = response.body();
+        Log.d(TAG, response.toString());
+      }
+
+      @Override
+      public void onFailure(@NonNull Call<Donor> call, @NonNull Throwable t) {
+        Log.e(TAG, t.getMessage());
+      }
+    });
+
+  }
+}
 }
