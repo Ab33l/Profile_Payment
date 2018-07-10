@@ -32,6 +32,15 @@ public class ViewActivity extends AppCompatActivity {
                 startActivity(new Intent(ViewActivity.this, PersonalActivity.class));
             }
         });
+         //when the user presses logout button
+        //calling the logout method
+        findViewById(R.id.buttonLogout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                SharedPrefManager.getInstance(getApplicationContext()).logout();
+            }
+        });
     }
     
 }
