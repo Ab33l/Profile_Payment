@@ -29,7 +29,7 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_ID, user.getDonorId());
         editor.putString(KEY_EMAIL, user.getDonorEmail());
-        editor.putString(KEY_USERNAME, user.getDonorUsername());
+        editor.putString(KEY_USERNAME, user.getDonorUserName());
         editor.putString(KEY_PHONENUMBER, user.getDonorPhoneNumber());
         editor.apply();
     }
