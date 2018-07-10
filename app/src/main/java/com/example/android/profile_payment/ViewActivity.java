@@ -16,6 +16,15 @@ public class ViewActivity extends AppCompatActivity {
         TextUsername = findViewById(R.id.TextUsername);
         TextEmail = findViewById(R.id.TextEmail);
         TextPhone = findViewById(R.id.TextPhone);
+        User user = SharedPrefManager.getInstance(this).getUser();
+        /*if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, LoginActivity.class));
+        }*/
+        //setting the values to the textviews
+        TextEmail.setText(user.getEmail());
+        TextUsername.setText(user.getUsername());
+        TextPhone.setText(user.getPhoneNumber());
         findViewById(R.id.buttonEdit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,4 +33,5 @@ public class ViewActivity extends AppCompatActivity {
             }
         });
     }
+    
 }
