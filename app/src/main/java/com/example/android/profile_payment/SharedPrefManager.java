@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class SharedPrefManager {
-    private static final String SHARED_PREF_NAME = "reglogsharedpref";
-    private static final String KEY_USERNAME = "keyusername";
+    private static final String SHARED_PREF_NAME = "profile_paymentsharedpref";
     private static final String KEY_EMAIL = "keyemail";
-    private static final String KEY_GENDER = "keygender";
+    private static final String KEY_USERNAME = "keyusername";
+    private static final String KEY_PHONENUMBER = "keyphoneNumber";
     private static final String KEY_ID = "keyid";
-    private static final String KEY_AGE = "keyage";
-    private static final String KEY_FULL_NAME = "keyfull_name";
-
+   
     private static SharedPrefManager mInstance;
     private static Context mCtx;
 
@@ -30,11 +28,9 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_ID, user.getId());
-        editor.putString(KEY_FULL_NAME, user.getFull_name());
         editor.putString(KEY_EMAIL, user.getEmail());
         editor.putString(KEY_USERNAME, user.getUsername());
-        editor.putString(KEY_GENDER, user.getGender());
-        editor.putString(KEY_AGE, user.getAge());
+        editor.putString(KEY_PHONENUMBER, user.getPhoneNumber());
         editor.apply();
     }
 
@@ -47,11 +43,9 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
                 sharedPreferences.getInt(KEY_ID, -1),
-                sharedPreferences.getString(KEY_FULL_NAME, null),
                 sharedPreferences.getString(KEY_EMAIL, null),
                 sharedPreferences.getString(KEY_USERNAME, null),
-                sharedPreferences.getString(KEY_GENDER, null),
-                sharedPreferences.getString(KEY_AGE, null)
+                sharedPreferences.getString(KEY_PHONENUMBER, null)
         );
     }
 
