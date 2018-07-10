@@ -27,10 +27,10 @@ public class SharedPrefManager {
     public void userLogin(User user) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_ID, user.getId());
-        editor.putString(KEY_EMAIL, user.getEmail());
-        editor.putString(KEY_USERNAME, user.getUsername());
-        editor.putString(KEY_PHONENUMBER, user.getPhoneNumber());
+        editor.putInt(KEY_ID, user.getDonorId());
+        editor.putString(KEY_EMAIL, user.getDonorEmail());
+        editor.putString(KEY_USERNAME, user.getDonorUsername());
+        editor.putString(KEY_PHONENUMBER, user.getDonorPhoneNumber());
         editor.apply();
     }
 
@@ -56,5 +56,4 @@ public class SharedPrefManager {
         editor.apply();
         mCtx.startActivity(new Intent(mCtx, LoginActivity.class));
     }
-
 }
