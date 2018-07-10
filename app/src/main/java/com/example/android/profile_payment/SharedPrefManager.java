@@ -1,4 +1,4 @@
-
+package com.example.android.profile_payment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
