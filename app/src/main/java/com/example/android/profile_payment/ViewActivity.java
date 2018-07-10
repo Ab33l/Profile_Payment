@@ -22,9 +22,9 @@ public class ViewActivity extends AppCompatActivity {
             startActivity(new Intent(this, LoginActivity.class));
         }*/
         //setting the values to the textviews
-        TextEmail.setText(user.getEmail());
-        TextUsername.setText(user.getUsername());
-        TextPhone.setText(user.getPhoneNumber());
+        TextEmail.setText(user.getDonorEmail());
+        TextUsername.setText(user.getDonorUserName());
+        TextPhone.setText(user.getDonorPhoneNumber());
         findViewById(R.id.buttonEdit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
